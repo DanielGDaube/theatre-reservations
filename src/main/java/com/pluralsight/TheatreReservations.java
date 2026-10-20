@@ -19,5 +19,8 @@ public class TheatreReservations {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
         LocalDate date = LocalDate.parse(scanner.nextLine(), formatter);
+
+        System.out.println("How many tickets would you like?");
+        int tickets = scanner.nextInt();
     }
 }
