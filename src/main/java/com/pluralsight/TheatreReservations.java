@@ -20,12 +20,21 @@ public class TheatreReservations {
 
         // Asks user how many tickets they want
         System.out.println("How many tickets would you like?");
-        int tickets = scanner.nextInt();
+        int ticketCount = scanner.nextInt();
 
         // Separates first name from last name
         int spaceIndex = name.indexOf(' ');
         String firstName = name.substring(0, spaceIndex);
         String lastName = name.substring(spaceIndex + 1);
+
+        String s = "tickets";
+       switch (ticketCount){
+           case 1 -> s = s.replace('s', ' ').trim();
+           default -> s = s;
+       }
+
+        // Prints conformation
+        System.out.println(ticketCount + " " +  s + " reserved for: " + date + ", under name: " + lastName + ", " + firstName);
 
     }
 }
