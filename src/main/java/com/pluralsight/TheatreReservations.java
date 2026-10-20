@@ -15,12 +15,17 @@ public class TheatreReservations {
 
         // Asks user when they will be coming
         System.out.println("What date will you be coming? (MM/dd/yyyy)");
-
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-
         LocalDate date = LocalDate.parse(scanner.nextLine(), formatter);
 
+        // Asks user how many tickets they want
         System.out.println("How many tickets would you like?");
         int tickets = scanner.nextInt();
+
+        // Separates first name from last name
+        int spaceIndex = name.indexOf(' ');
+        String firstName = name.substring(0, spaceIndex);
+        String lastName = name.substring(spaceIndex + 1);
+
     }
 }
